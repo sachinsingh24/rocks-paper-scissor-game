@@ -4,8 +4,11 @@ let result = [
   'Result = You Win Computer Lose',
   'Result = You Lose Computer Win',
 ];
+const chalk = require('chalk');
 console.log(
-  `Enter values in numbers 1 for "Rocks", 2 for "Paper", 3 for "Scissor" :`
+  chalk.white.bgBlue.bold(
+    `Enter values in numbers 1 for "Rocks", 2 for "Paper", 3 for "Scissor" :`
+  )
 );
 //collect result scores in array
 const draw = [],
@@ -24,9 +27,10 @@ for (let i = 0; i < 10; i++) {
   }
 }
 console.log(
-  `Count Draw : ${draw.length}\nCount Win : ${win.length}\nCount Lose : ${lose.length}`
+  `Count Draw : ${draw.length}\nCount Win : ${win.length}\nCount Lose : ${
+    lose.length
+  }\nTotal User Played : ${draw.length + win.length + lose.length}`
 );
-console.log(`Total User Played : ${draw.length + win.length + lose.length}`);
 //this function for computer choose random values and compare with users value
 function comp_choice() {
   const user_val = get_user();
@@ -72,7 +76,7 @@ function get_user() {
   //   )
   // );
   const input = require('readline-sync');
-  const user = input.question(); // optional variable if prompt error
+  const user = input.keyIn(); // optional variable if prompt error
   if (user == 1) {
     return game[0];
   } else if (user == 2) {
