@@ -11,33 +11,31 @@ console.log(
   )
 );
 //collect result scores in array
-const draw = [],
-  win = [],
-  lose = [];
+let draw = 0,
+  win = 0,
+  lose = 0;
 // play 10 users
 for (let i = 0; i < 10; i++) {
   const data = comp_choice();
-  console.log(data);
+  console.log(chalk.white.bold(data));
   if (data == result[0]) {
-    draw.push('1');
+    draw++;
   } else if (data == result[1]) {
-    win.push('1');
+    win++;
   } else {
-    lose.push('1');
+    lose++;
   }
 }
 console.log(
-  `Count Draw : ${draw.length}\nCount Win : ${win.length}\nCount Lose : ${
-    lose.length
-  }\nTotal User Played : ${draw.length + win.length + lose.length}`
-);
+  `Count Draw : ${draw}\nCount Win : ${win}\nCount Lose : ${lose
+  }\nTotal User Played : ${draw+win+lose}`);
 //this function for computer choose random values and compare with users value
 function comp_choice() {
   const user_val = get_user();
-  console.log(`You choose : "${user_val}"`);
+  console.log(chalk.white.bgRed.bold(`You choose : "${user_val}"`));
   //computer select random values and compare with users value
   const computer = (game.computer = Math.floor(Math.random() * 3));
-  console.log(`Computer choose : "${game[computer]}"`);
+  console.log(chalk.white.bgBlue.bold(`Computer choose : "${game[computer]}"`));
   if (computer == 0) {
     //computer choose "rocks"
     if (game[0] == user_val) {
