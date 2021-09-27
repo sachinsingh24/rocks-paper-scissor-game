@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-dark: #1c2042;
+  --clr-white: #ffffff;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: var(--clr-dark);
+  color: var(--clr-white);
+}
+.fluid-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+small {
+  font-size: 1rem;
+}
+.score {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 2rem;
+}
+.userScore,
+.computerScore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 3rem;
+}
+.pantagon {
+  margin-top: -12rem;
+  width: 22%;
+  align-items: center;
+}
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+}
+.end {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  margin-top: -2rem;
+}
+.gameover {
+  margin-top: -1rem;
+  font-size: 2.5rem;
+  color: #e49d9d;
+}
+.winner {
+  margin: 1rem;
+  font-size: 3rem;
+  color:gold;
+}
+.button {
+  color: red;
+  background-color: wheat;
+  border-radius: 50%;
+  padding: 1rem 1rem;
+  margin-left: 1rem;
+}
+#rock {
+  padding: 1.45rem 1.5rem;
+  box-shadow: 5px 10px #e49d9d;
+}
+#paper {
+  padding: 1.1rem 1.5rem;
+  box-shadow: 5px 10px #e49d9d;
+}
+#scissors {
+  padding: 1.1rem 1.5rem;
+  box-shadow: 5px 10px #e49d9d;
+}
+#spock {
+  padding: 1.1rem 1.6rem;
+  box-shadow: 5px 10px #e49d9d;
+}
+#lizard {
+  box-shadow: 5px 10px #e49d9d;
+}
+.selection {
+  display: flex;
+  flex-direction: column;
+  margin: -3rem;
+  font-size: 2rem;
+  align-items: center;
+}
+.userSelection {
+  padding: 1rem;
+}
+.computerSelection {
+  margin-top: -2rem;
+  padding: 1rem;
+}
+.result {
+  color: fuchsia;
+  padding: 1rem;
+}

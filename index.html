@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissor game</title>
+    <link rel="stylesheet" href="/styles/normalize.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="fluid-container">
+      <div class="container">
+        <h1>Rock Paper Scissor Game</h1>
+        <small>Choose Your selection by hitting any one button </small>
+        <ul class="score">
+          <li class="userScore">user <span id="userScore">0</span></li>
+          <li class="computerScore">
+            computer <span id="computerScore">0</span>
+          </li>
+        </ul>
+      </div>
+      <div class="end" id="end">
+        <span class="gameover" id="gameover">Game Over</span>
+        <span class="winner" id="winner"></span>
+      </div>
+      <div class="pantagon" id="pantagon">
+        <div class="button-container">
+          <button id="rock" class="button" onclick="button('Rocks')">
+            <img src="images/icon-rock.svg" alt="rock" />
+          </button>
+          <button id="paper" class="button" onclick="button('Paper')">
+            <img src="images/icon-paper.svg" alt="paper" />
+          </button>
+          <button id="scissors" class="button" onclick="button('Scissor')">
+            <img src="images/icon-scissors.svg" alt="scissors" />
+          </button>
+          <button id="lizard" class="button" onclick="button('lizard')">
+            <img src="images/icon-lizard.svg" alt="lizard" />
+          </button>
+          <button id="spock" class="button" onclick="button('spock')">
+            <img src="images/icon-spock.svg" alt="spock" />
+          </button>
+        </div>
+      </div>
+      <div class="selection" id="selection">
+        <span class="userSelection" id="userSelection"></span>
+        <span class="computerSelection" id="computerSelection"></span>
+        <h4 class="result" id="result"></h4>
+      </div>
+    </div>
+    <script src="/index.js"></script>
+  </body>
+</html>
